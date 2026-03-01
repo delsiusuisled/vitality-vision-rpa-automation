@@ -45,11 +45,11 @@ The automation improves efficiency, reduces manual processing errors, and ensure
 
 ## 📊 Project Structure
 
-Main.xaml
-project.json
-Workflows/
-Data/
-Logs/
+- Main.xaml, and other xaml files
+- project.json
+- Workflows/
+- Data/
+- Logs/
 
 ---
 
