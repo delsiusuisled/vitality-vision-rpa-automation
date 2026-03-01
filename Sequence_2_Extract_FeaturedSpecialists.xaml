@@ -1,0 +1,445 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Extract_FeaturedSpecialists" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Sequence_Extract_FeaturedSpecialists_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Windows.Documents</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>PresentationUI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.FTP.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_Extract_FeaturedSpecialists" sap:VirtualizedContainerService.HintSize="1038,5843" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="534,167" sap2010:WorkflowViewState.IdRef="AppendLine_9" Text="[&quot;INFO: Extracting Featured Specialist process started at &quot; &amp; runTimeStampForLoggingTxtFile]" UseDefaultEncoding="False">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:AppendLine>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Robot will open the Vitality Vision Website to Extract Featured Specialists" AttachMode="ByInstance" DisplayName="Edge Home  Global Health(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="534,5653" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="7f696abe-70d2-47f6-b199-48552fcb0fe1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="532,5428" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch - Extracting Featured Specialists from Vitality Vision Website" sap:VirtualizedContainerService.HintSize="498,3284" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="496,2082" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="462,202" sap2010:WorkflowViewState.IdRef="AppendLine_8" Text="[&quot;INFO: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - Bot has successfully entered into the Vitality Vision Website for Featured Specialists Extraction.&quot;]" UseDefaultEncoding="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AppendLine>
+                  <Delay sap2010:Annotation.AnnotationText="Gives the website time for it to load." Duration="00:00:05" sap:VirtualizedContainerService.HintSize="462,154" sap2010:WorkflowViewState.IdRef="Delay_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Delay>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[SpecialistsDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Specialist Type'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Specialist Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Description'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Organisation'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="462,147" sap2010:WorkflowViewState.IdRef="NExtractData_10" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="7f696abe-70d2-47f6-b199-48552fcb0fe1" Version="V5">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable BrowserURL="https://lookitfan.wixsite.com/vitalityvision" DesignTimeRectangle="-6, 403, 1931, 1740" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='FLUID-COLUMNS-REPEATER' /&gt;" Guid="919dede9-f044-4aef-b7c7-b42a70bf5397" InformativeScreenshot="4c5ec130c901e701aad571e7252537bc.jpg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home | Global Health' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="462,202" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[&quot;INFO: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - Featured specialists extracted successfully.&quot;]" UseDefaultEncoding="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AppendLine>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="462,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Featured specialists extracted successfully.&quot;]" />
+                  <Assign sap2010:Annotation.AnnotationText="Assign variable to follow email template to format date as mm-dd-yyyy in EXCEL file" sap:VirtualizedContainerService.HintSize="462,220" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[formattedDateforExcelNaming]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[Now.ToString("MM-dd-yyyy")]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <Assign sap2010:Annotation.AnnotationText="Assign variable to follow email template to format date as dd mmm yyyy, where the month is displayed as the first 3 letters of the month (eg Feb, Mar) in EMAIL" sap:VirtualizedContainerService.HintSize="462,252" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[todayDateforEmail]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[Now.ToString("dd MMM yyyy")]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <Assign sap2010:Annotation.AnnotationText="This is to name the Excel file containing the Extracted Featured Specialists for that day which will be attached to the email going to be sent to sitrpadec2019@gmail.com" sap:VirtualizedContainerService.HintSize="462,252" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[featuredSpecialistFilePath]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">["Featured Specialist (" &amp; formattedDateforExcelNaming &amp; ").xlsx"]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" sap2010:Annotation.AnnotationText="Create an Excel file containing the Extracted Featured Specialists for that day and formatting the naming with featuredSpecialistFilePath variable." DataTable="[SpecialistsDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="462,225" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[featuredSpecialistFilePath]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:WriteRange>
+                  <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="462,193" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[&quot;INFO: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - Featured Specialist Excel File created - &quot; &amp; featuredSpecialistFilePath]" UseDefaultEncoding="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AppendLine>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,934" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="462,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;The program encountered a System Exception when Extracting Featured Specialists at the Vitality Vision Website.&quot;]" />
+                      <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="462,202" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[&quot;ERROR: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - The program encountered a System Exception when Extracting Featured Specialists at the Vitality Vision Website.&quot;]" UseDefaultEncoding="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:AppendLine>
+                      <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" sap2010:Annotation.AnnotationText="If Featured Speciaists data failed to extract for whatever technical reasons, contact admin via email and inform them that there is an error in the Extracting Featured Specialists Data process." Body="[&quot;&lt;html&gt;&#xA;&lt;body&gt;&#xA;    &lt;p&gt;Dear Admin,&lt;/p&gt;&#xA;&#xA;    &lt;p&gt;We regret to inform you that the Featured Specialists could not be extracted successfully for &quot; &amp; todayDateforEmail &amp; &quot; from the website. &lt;/p&gt;&#xA;&#xA;    &lt;p&gt;Please look into the issue at your earliest convenience.&lt;/p&gt;&#xA;&#xA;    &lt;p&gt;Thank you.&lt;/p&gt;&#xA;&#xA;    &lt;p&gt;Regards,&lt;/p&gt;&#xA;    &lt;p&gt;Vitality Vision IT Automation Team&lt;/p&gt;&#xA;    &lt;img src='&quot; &amp; VitalityVisionLogo &amp; &quot;'/&gt;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="462,304" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[&quot;&lt;&lt;Vitality Vision&gt;&gt; Featured Specialists - &quot; &amp; todayDateforEmail &amp; &quot; failed to extract&quot;]" To="admin@vitalityvision.com" UseISConnection="False">
+                        <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                          <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                            <usau:BackupSlot.BackupValues>
+                              <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                            </usau:BackupSlot.BackupValues>
+                          </usau:BackupSlot>
+                        </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                        <ui:SendOutlookMail.Files>
+                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                        </ui:SendOutlookMail.Files>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:SendOutlookMail>
+                      <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="462,193" sap2010:WorkflowViewState.IdRef="AppendLine_4" Text="[&quot;INFO: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - An email has been sent to Admin informing them that there was an error extracting featured specialists from the website.&quot;]" UseDefaultEncoding="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:AppendLine>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="496,90" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </TryCatch.Finally>
+            </TryCatch>
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="498,171" sap2010:WorkflowViewState.IdRef="AppendLine_10" Text="[&quot;INFO: Email sending of Featured Specialist File to Publicity Team process started at &quot; &amp; runTimeStampForLoggingTxtFile]" UseDefaultEncoding="False">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AppendLine>
+            <TryCatch DisplayName="Try Catch - Attempt to Email Featured Specialists email to Publicity Team" sap:VirtualizedContainerService.HintSize="498,1913" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="495,720" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" sap2010:Annotation.AnnotationText="Once all the Featured Specialists are extracted successfully, email the publicity team and attach the Featured Specialists Excel file for that date." Body="[&quot;&lt;html&gt;&#xD;&#xA;&lt;body&gt;&#xD;&#xA;    &lt;p&gt;Dear Publicity Team,&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;    &lt;p&gt;Please see attached Excel file for the Featured Specialists For &quot; &amp; todayDateforEmail &amp; &quot;. &lt;/p&gt;&#xD;&#xA;&#xD;&#xA;    &lt;p&gt;Thank you.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;    &lt;p&gt;Regards,&lt;/p&gt;&#xD;&#xA;    &lt;p&gt;Vitality Vision Marketing Team&lt;/p&gt;&#xD;&#xA;    &lt;img src='&quot; &amp; VitalityVisionLogo &amp; &quot;'/&gt;&#xD;&#xA;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="461,288" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[&quot;&lt;&lt;Vitality Vision&gt;&gt; Featured Specialists - &quot; &amp; todayDateforEmail]" To="sitrpadec2019@gmail.com" UseISConnection="False">
+                    <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">[featuredSpecialistFilePath]</InArgument>
+                      </scg:List>
+                    </ui:SendOutlookMail.Files>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SendOutlookMail>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="461,179" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Featured specialists email sent to publicity team successfully.&quot;]" />
+                  <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="461,189" sap2010:WorkflowViewState.IdRef="AppendLine_5" Text="[&quot;INFO: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - Featured specialists email sent to publicity team successfully.&quot;]" UseDefaultEncoding="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AppendLine>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="495,930" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="461,179" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Failed to send featured specialists email.&quot;]" />
+                      <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="461,202" sap2010:WorkflowViewState.IdRef="AppendLine_6" Text="[&quot;ERROR: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - Failed to send featured specialists email.&quot;]" UseDefaultEncoding="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:AppendLine>
+                      <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" UseRichTextEditor="{x:Null}" sap2010:Annotation.AnnotationText="If in the case where the emailing of Extracted Specialist to Publicity team fails, email to admin to inform that this process failed." Body="[&quot;&lt;html&gt;&#xD;&#xA;&lt;body&gt;&#xD;&#xA;    &lt;p&gt;Dear Admin,&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;    &lt;p&gt;We regret to inform you that the Excel file For the Featured Specialists could not be sent successfully for &quot; &amp; todayDateforEmail &amp; &quot;. &lt;/p&gt;&#xD;&#xA;&#xD;&#xA;    &lt;p&gt;Please look into the issue at your earliest convenience.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;    &lt;p&gt;Thank you.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;    &lt;p&gt;Regards,&lt;/p&gt;&#xD;&#xA;    &lt;p&gt;Vitality Vision IT Automation Team&lt;/p&gt;&#xD;&#xA;    &lt;img src='&quot; &amp; VitalityVisionLogo &amp; &quot;'/&gt;&#xD;&#xA;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&quot;]" ConnectionMode="LegacyConfiguration" DisplayName="Send Outlook Desktop Mail Message" sap:VirtualizedContainerService.HintSize="461,292" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[&quot;&lt;&lt;Vitality Vision&gt;&gt; Featured Specialists - &quot; &amp; todayDateforEmail &amp; &quot;failed to send&quot;]" To="admin@vitalityvision.com" UseISConnection="False">
+                        <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                          <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                            <usau:BackupSlot.BackupValues>
+                              <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                            </usau:BackupSlot.BackupValues>
+                          </usau:BackupSlot>
+                        </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                        <ui:SendOutlookMail.Files>
+                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                        </ui:SendOutlookMail.Files>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:SendOutlookMail>
+                      <ui:AppendLine File="{x:Null}" sap2010:Annotation.AnnotationText="Log in txt file that the process to run has started" DisplayName="Append Line" FileName="[logFilePath]" sap:VirtualizedContainerService.HintSize="461,193" sap2010:WorkflowViewState.IdRef="AppendLine_7" Text="[&quot;INFO: Process started on &quot; &amp; runTimeStampForLoggingTxtFile &amp; &quot; - An email has been sent to Admin informing them that the Featured Specialists email was not sent to Publicity team successfully.&quot;]" UseDefaultEncoding="False">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:AppendLine>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="495,94" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </TryCatch.Finally>
+            </TryCatch>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="-Uel3ciiXU-BvecP2jqEdw" IconBase64="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" InformativeScreenshot="7f334281a82428fd13dfed5824173e16.jpg" Reference="3-RryBTzKU2dQm9DR_SvPA/US5t17Rg7kSblYM-CMEcig" Selector="&lt;html app='msedge.exe' title='Home | Global Health' /&gt;" Url="https://lookitfan.wixsite.com/vitalityvision" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

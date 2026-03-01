@@ -1,0 +1,6 @@
+{
+  "Name": "221025N_RPA_Assignment",
+  "ProjectType": "Process",
+  "Description": "Vitality Vision's Bot Processes",
+  "MainFile": "Main.xaml"
+}
